@@ -43,7 +43,9 @@ void sortMatrix(std::vector<std::pair<int, std::vector<int>>>& v){
     }
   }
   for(unsigned int i=0; i<v.size(); i++){
-    sortVector(v[i].second);
+    if(!v[i].second.empty()){
+      sortVector(v[i].second);
+    }
   }
 }
 
